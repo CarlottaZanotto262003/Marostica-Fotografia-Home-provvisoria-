@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marostica Fotografia 1979</title>
+    <!-- Favicons: posiziona i file in root o aggiorna i percorsi -->
+    <link rel="icon" href="mf79_quadrato_white_on_blu.png" sizes="any">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#0a0a0a">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Font Awesome per le icone social -->
@@ -53,6 +57,21 @@
             text-transform: uppercase;
         }
 
+        .site-branding {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .site-logo {
+            width: 90px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: contain;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
         .hero p {
             font-size: 1.2rem;
             color: var(--accent);
@@ -287,6 +306,8 @@
             .hero h1 { font-size: 2.8rem; }
             form { padding: 25px; }
             .social-btn { width: 100%; }
+            .site-branding { flex-direction: column; gap: 10px; }
+            .site-logo { width: 70px; }
         }
     </style>
 </head>
@@ -295,7 +316,10 @@
     <!-- Hero Section -->
     <section class="hero">
         <p>Passione,Arte e Cultura dal 1979</p>
-        <h1>Marostica<br>Fotografia 1979</h1>
+        <div class="site-branding">
+            <img src="mf79_quadrato_blu_on_transparent.png" alt="Marostica Fotografia logo" class="site-logo">
+            <h1>Marostica<br>Fotografia 1979</h1>
+        </div>
         <div class="cta-buttons">
             <a href="#iscrizione" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Scrivici</a>
         </div>
