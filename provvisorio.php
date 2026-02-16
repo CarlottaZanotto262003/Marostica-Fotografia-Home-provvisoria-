@@ -6,381 +6,431 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marostica Fotografia 1979</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome per le icone social -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        :root {
-            --accent: #d32f2f;
-            --bg: #0a0a0a;
-            --text: #ffffff;
-            --text-dim: #a0a0a0;
-            --whatsapp: #25d366;
-            --instagram: #e1306c;
-            --facebook: #1877f2;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marostica Fotografia 1979</title>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
+  <!-- Favicons: posiziona i file in root o aggiorna i percorsi -->
+  <link rel="icon" href="mf79_quadrato_white_on_blu.png" sizes="any">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('marostica-fotografia-vetrina.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
+  <!-- Font Awesome per le icone social -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--accent);
-            letter-spacing: 4px;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
+  <style>
+    :root {
+      --accent: #d32f2f;
+      --bg: #0a0a0a;
+      --text: #ffffff;
+      --text-dim: #a0a0a0;
+      --whatsapp: #25d366;
+      --instagram: #e1306c;
+      --facebook: #1877f2;
+    }
 
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        .btn {
-            padding: 15px 35px;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 50px;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            scroll-behavior: smooth;
-        }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
 
-        .btn-primary {
-            background-color: var(--accent);
-            color: white;
-            border: 2px solid var(--accent);
-        }
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                  url('marostica-fotografia-vetrina.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
 
-        .btn-primary:hover {
-            background-color: transparent;
-            color: var(--accent);
-            transform: translateY(-3px);
-        }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      margin-bottom: 0;
+      text-transform: uppercase;
+      line-height: 0.95;
+    }
 
-        .btn-outline {
-            background-color: transparent;
-            color: white;
-            border: 2px solid white;
-        }
+    /* Sottotitolo (rosso) */
+    .hero > p {
+      font-size: 1.2rem;
+      color: var(--accent);
+      letter-spacing: 4px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
 
-        .btn-outline:hover {
-            background-color: white;
-            color: black;
-            transform: translateY(-3px);
-        }
+    .site-branding {
+      display: flex;
+      align-items: stretch; /* fa “stirare” i figli alla stessa altezza */
+      gap: 22px;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
 
-        /* Content Sections */
-        .content-section {
-            padding: 80px 5%;
-            max-width: 900px;
-            margin: 0 auto;
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 1s ease-out forwards;
-        }
+    .site-logo {
+      height: 100%;
+      width: auto;
+      max-height: 190px;
+      min-height: 120px;
+      border-radius: 10px;
+      object-fit: contain;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .site-branding h1 {
+      display: flex;
+      align-items: center; /* centra verticalmente il testo rispetto al logo */
+    }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-            animation: fadeInUp 1s ease-out 0.15s forwards;
-            opacity: 0;
-            transform: translateY(50px);
-        }
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-        .section-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-        }
+    .btn {
+      padding: 15px 35px;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      scroll-behavior: smooth;
+    }
 
-        /* Form */
-        form {
-            background: #161616;
-            padding: 40px;
-            border-radius: 15px;
-            border: 1px solid #222;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            animation: fadeInUp 1s ease-out 0.3s forwards;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.3s ease;
-        }
+    .btn-primary {
+      background-color: var(--accent);
+      color: white;
+      border: 2px solid var(--accent);
+    }
 
-        form:hover {
-            border-color: var(--accent);
-            box-shadow: 0 20px 50px rgba(211, 47, 47, 0.2);
-        }
+    .btn-primary:hover {
+      background-color: transparent;
+      color: var(--accent);
+      transform: translateY(-3px);
+    }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+    .btn-outline {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 0.85rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+    .btn-outline:hover {
+      background-color: white;
+      color: black;
+      transform: translateY(-3px);
+    }
 
-        input, textarea, select {
-            width: 100%;
-            padding: 14px;
-            background: #000;
-            border: 1px solid #333;
-            color: white;
-            border-radius: 8px;
-            font-family: inherit;
-            transition: 0.3s;
-        }
+    /* Content Sections */
+    .content-section {
+      padding: 80px 5%;
+      max-width: 900px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
 
-        input:focus, textarea:focus {
-            border-color: var(--accent);
-            outline: none;
-            background: #050505;
-        }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        .submit-btn {
-            width: 100%;
-            padding: 18px;
-            background: var(--accent);
-            border: none;
-            color: white;
-            font-weight: 700;
-            cursor: pointer;
-            border-radius: 8px;
-            text-transform: uppercase;
-            transition: 0.3s;
-            letter-spacing: 1px;
-        }
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+      animation: fadeInUp 1s ease-out 0.15s forwards;
+      opacity: 0;
+      transform: translateY(50px);
+    }
 
-        .submit-btn:hover {
-            filter: brightness(1.2);
-            transform: scale(1.01);
-        }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
 
-        /* Social Section */
-        .social-container {
-            margin-top: 60px;
-            text-align: center;
-        }
+    /* Form */
+    form {
+      background: #161616;
+      padding: 40px;
+      border-radius: 15px;
+      border: 1px solid #222;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      animation: fadeInUp 1s ease-out 0.3s forwards;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.3s ease;
+    }
 
-        .social-title {
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
+    form:hover {
+      border-color: var(--accent);
+      box-shadow: 0 20px 50px rgba(211, 47, 47, 0.2);
+    }
 
-        .social-title::before, .social-title::after {
-            content: '';
-            height: 1px;
-            width: 50px;
-            background: #333;
-        }
+    .form-group { margin-bottom: 20px; }
 
-        .social-grid {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-        .social-btn {
-            padding: 15px 25px;
-            border-radius: 12px;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid transparent;
-            min-width: 160px;
-            justify-content: center;
-        }
+    input, textarea, select {
+      width: 100%;
+      padding: 14px;
+      background: #000;
+      border: 1px solid #333;
+      color: white;
+      border-radius: 8px;
+      font-family: inherit;
+      transition: 0.3s;
+    }
 
-        .social-btn i { font-size: 1.2rem; }
+    input:focus, textarea:focus {
+      border-color: var(--accent);
+      outline: none;
+      background: #050505;
+    }
 
-        .s-ig { background: rgba(225, 48, 108, 0.1); border-color: rgba(225, 48, 108, 0.3); color: var(--instagram); }
-        .s-ig:hover { background: var(--instagram); color: white; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(225, 48, 108, 0.3); }
+    .submit-btn {
+      width: 100%;
+      padding: 18px;
+      background: var(--accent);
+      border: none;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 8px;
+      text-transform: uppercase;
+      transition: 0.3s;
+      letter-spacing: 1px;
+    }
 
-        .s-wa { background: rgba(37, 211, 102, 0.1); border-color: rgba(37, 211, 102, 0.3); color: var(--whatsapp); }
-        .s-wa:hover { background: var(--whatsapp); color: white; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+    .submit-btn:hover {
+      filter: brightness(1.2);
+      transform: scale(1.01);
+    }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 60px 5%;
-            border-top: 1px solid #1a1a1a;
-            color: var(--text-dim);
-            font-size: 0.75rem;
-            background: #050505;
-        }
+    /* Social Section */
+    .social-container {
+      margin-top: 60px;
+      text-align: center;
+    }
 
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: var(--accent);
-            margin-bottom: 20px;
-            display: block;
-        }
+    .social-title {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
-            form { padding: 25px; }
-            .social-btn { width: 100%; }
-        }
-    </style>
+    .social-title::before, .social-title::after {
+      content: '';
+      height: 1px;
+      width: 50px;
+      background: #333;
+    }
+
+    .social-grid {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      padding: 15px 25px;
+      border-radius: 12px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid transparent;
+      min-width: 160px;
+      justify-content: center;
+    }
+
+    .social-btn i { font-size: 1.2rem; }
+
+    .s-ig { background: rgba(225, 48, 108, 0.1); border-color: rgba(225, 48, 108, 0.3); color: var(--instagram); }
+    .s-ig:hover { background: var(--instagram); color: white; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(225, 48, 108, 0.3); }
+
+    .s-fb { background: rgba(24, 119, 242, 0.1); border-color: rgba(24, 119, 242, 0.3); color: var(--facebook); }
+    .s-fb:hover { background: var(--facebook); color: white; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(24, 119, 242, 0.3); }
+
+    .s-wa { background: rgba(37, 211, 102, 0.1); border-color: rgba(37, 211, 102, 0.3); color: var(--whatsapp); }
+    .s-wa:hover { background: var(--whatsapp); color: white; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 60px 5%;
+      border-top: 1px solid #1a1a1a;
+      color: var(--text-dim);
+      font-size: 0.75rem;
+      background: #050505;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.8rem; }
+      form { padding: 25px; }
+      .social-btn { width: 100%; }
+
+      .site-branding { flex-direction: column; gap: 12px; align-items: center; }
+      .site-logo { max-height: 120px; min-height: 90px; }
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <p>Passione,Arte e Cultura dal 1979</p>
-        <h1>Marostica<br>Fotografia 1979</h1>
-        <div class="cta-buttons">
-            <a href="#iscrizione" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Scrivici</a>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <p>Passione,Arte e Cultura dal 1979</p>
 
-    <!-- Content Section -->
-    <section class="content-section" id="iscrizione">
-        <div class="section-header">
-            <p>Utilizza il form qui sotto per iscriverti al prossimo Corso o per qualsiasi richiesta.</p>
-        </div>
+    <div class="site-branding">
+      <img src="mf79_quadrato_blu_on_transparent.png" alt="Marostica Fotografia logo" class="site-logo">
+      <h1>Marostica<br>Fotografia 1979</h1>
+    </div>
 
-        <!-- Form con invio reale tramite Formspree -->
-        <form action="https://formspree.io/f/info@marosticafotografia1979.it" method="POST">
-            <div class="form-group">
-                <label>Nome e Cognome</label>
-                <input type="text" name="nome" placeholder="Mario Rossi" required>
-            </div>
-            
-            <div class="form-group">
-                <label>Indirizzo Email</label>
-                <input type="email" name="_replyto" placeholder="esempio@email.com" required>
-            </div>
+    <div class="cta-buttons">
+      <a href="#iscrizione" class="btn btn-outline">
+        <i class="fa-solid fa-envelope"></i> Scrivici
+      </a>
+    </div>
+  </section>
 
-            <div class="form-group">
-                <label>Numero</label>
-                <input type="number" name="_replyto" placeholder="123456789" required>
-            </div>
+  <!-- Content Section -->
+  <section class="content-section" id="iscrizione">
+    <div class="section-header">
+      <p>Utilizza il form qui sotto per iscriverti al prossimo Corso o per qualsiasi richiesta.</p>
+    </div>
 
-            <div class="form-group">
-                <label>Il tuo messaggio</label>
-                <textarea name="messaggio" rows="5" placeholder="Scrivi qui..."></textarea>
-            </div>
+    <!-- Form con invio reale tramite Formspree -->
+    <form action="https://formspree.io/f/info@marosticafotografia1979.it" method="POST">
+      <div class="form-group">
+        <label>Nome e Cognome</label>
+        <input type="text" name="nome" placeholder="Mario Rossi" required>
+      </div>
 
-            <button type="submit" class="submit-btn">Invia Messaggio</button>
-        </form>
+      <div class="form-group">
+        <label>Indirizzo Email</label>
+        <input type="email" name="_replyto" placeholder="esempio@email.com" required>
+      </div>
 
-        <!-- Social Section -->
-        <div class="social-container">
-            <div class="social-title">Social Media</div>
-            <div class="social-grid">
-                <a href="https://www.instagram.com/invites/contact/?igsh=1x8sasswho1ad&utm_content=txsw40z" target="_blank" class="social-btn s-ig">
-                    <i class="fa-brands fa-instagram"></i> Instagram
-                </a>
-                <a href="https://wa.me/393452397740" target="_blank" class="social-btn s-wa">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                </a>
-            </div>
-        </div>
-    </section>
+      <div class="form-group">
+        <label>Numero</label>
+        <input type="number" name="numero" placeholder="123456789" required>
+      </div>
 
-    <footer>
-        <span class="footer-logo">MF1979</span>
-        <p>Corso Mazzini 77, 36063 Marostica (VI)</p>
-        <p style="margin-top: 10px;">&copy; 2026 Marostica Fotografia 1979. Tutti i diritti riservati.</p>
-    </footer>
+      <div class="form-group">
+        <label>Il tuo messaggio</label>
+        <textarea name="messaggio" rows="5" placeholder="Scrivi qui..."></textarea>
+      </div>
 
-    <script>
-        // Intersection Observer per animazioni smooth al scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
+      <button type="submit" class="submit-btn">Invia Messaggio</button>
+    </form>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 1s ease-out forwards';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
+    <!-- Social Section -->
+    <div class="social-container">
+      <div class="social-title">Social Media</div>
+      <div class="social-grid">
+        <a href="https://www.instagram.com/invites/contact/?igsh=1x8sasswho1ad&utm_content=txsw40z"
+           target="_blank" rel="noopener noreferrer"
+           class="social-btn s-ig">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
 
-        // Osserva la sezione del form
-        const contentSection = document.querySelector('.content-section');
-        if (contentSection) {
-            contentSection.style.opacity = '0';
-            contentSection.style.transform = 'translateY(50px)';
-            observer.observe(contentSection);
+        <a href="https://www.facebook.com/groups/350825567053"
+           target="_blank" rel="noopener noreferrer"
+           class="social-btn s-fb">
+          <i class="fa-brands fa-facebook"></i> Facebook
+        </a>
+
+        <a href="https://wa.me/393452397740"
+           target="_blank" rel="noopener noreferrer"
+           class="social-btn s-wa">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-logo">MF1979</span>
+    <p>Corso Mazzini 77, 36063 Marostica (VI)</p>
+    <p style="margin-top: 10px;">&copy; 2026 Marostica Fotografia 1979. Tutti i diritti riservati.</p>
+  </footer>
+
+  <script>
+    // Intersection Observer per animazioni smooth al scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInUp 1s ease-out forwards';
+          observer.unobserve(entry.target);
         }
-    </script>
+      });
+    }, observerOptions);
+
+    // Osserva la sezione del form
+    const contentSection = document.querySelector('.content-section');
+    if (contentSection) {
+      contentSection.style.opacity = '0';
+      contentSection.style.transform = 'translateY(50px)';
+      observer.observe(contentSection);
+    }
+  </script>
 
 </body>
 </html>
